@@ -5,6 +5,7 @@ import { Contact } from './components/contact/contact';
 import { Error404 } from './components/error404/error404';
 import { Presentation } from './components/presentation/presentation';
 import { Info } from './components/info/info';
+import { ProductSelected } from './components/product-selected/product-selected';
 
 export const routes: Routes = [
     {path:"home", title: "Accueil", component:Home,
@@ -15,6 +16,7 @@ export const routes: Routes = [
         ]
     },
     { path:"products", title: "Produits", component:ProductList},
+    { path:"products/:idP", title: "Produit Sélectionné", component:ProductSelected},
     { path:"contact", title:"Contact", component: Contact},
     { path:"", redirectTo:"home", pathMatch:"full"},
     { path:"**", title:"Erreur", component:Error404}

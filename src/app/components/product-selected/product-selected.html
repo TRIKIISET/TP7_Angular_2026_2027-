@@ -1,0 +1,13 @@
+<h2>Produit sélectionné</h2>
+@if(product()){
+<div>
+    {{product() |json}}
+</div>
+}
+@else{
+<div>
+    L'identifiant n'existe pas
+</div>
+}
+
+<button (click)="onBackToProducts()">Retour</button>
